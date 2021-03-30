@@ -259,16 +259,6 @@ const DataListInput = ({
       setFocusIndex(-1);
       interactionHappenedRef.current = true;
       onDropdownClose();
-
-      if (
-        suppressReselect &&
-        lastValidItem &&
-        selectedItem.key === lastValidItem.key
-      ) {
-        // do not trigger the callback function
-        // but still change state to fit new selection
-        return;
-      }
       // change state to fit new selection
       setLastValidItem(selectedItem);
       // callback function onSelect
